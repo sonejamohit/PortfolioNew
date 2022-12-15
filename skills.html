@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="skills.css">
+    <script src="https://kit.fontawesome.com/0e6863b0de.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <img src="" alt="">
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+    <div class="header">
+        <h1>Skills</h1>
+    </div>
+    <!-- -------------about section----------- -->
+    <section id="skills">
+        <div class="container">
+            <div class="box">
+                <h3>Programming Languages</h3>
+                <div class="line"></div>
+                <div class="grid">
+                    <div class="icons">
+                        <img src="./assets/C.png" alt="c-img">
+                    </div>
+                    <div class="icons">
+                        <img src="./assets/C++.png" alt="c++-img">
+                    </div>
+                    <div class="icons">
+                        <img src="./assets/js.png" alt="js-img">
+                    </div>
+                    <div class="icons">
+                        <img src="./assets/python.png" alt="py-img">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Frontend Development</h3>
+                <div class="line"></div>
+                <div class="grid">
+                    <div class="icons">
+                        <img src="./assets/HTML.png" alt="html-img">
+                    </div>
+                    <div class="icons">
+                        <img src="./assets/CSS.png" alt="css-img">
+                    </div>
+                    <div class="icons">
+                        <img src="./assets/Bootstrap.png" alt="bootstrap-img">
+                    </div>
+                    <div class="icons">
+                        <img src="./assets/SASS.png" alt="sass-img">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Backend Development</h3>
+                <div class="line"></div>
+                <div class="grid">
+                    <div class="icons">
+                        <img src="./assets/node.png" alt="node-img">
+                    </div>
+                    <div class="icons">
+                        <img src="./assets/express.png" alt="express-img">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Database</h3>
+                <div class="line"></div>
+                <div class="grid">
+                    <div class="icons">
+                        <img src="./assets/mongoDB.png" alt="mongodb-img">
+                    </div>
+                    <div class="icons">
+                        <img src="./assets/mysql.png" alt="mysql-img">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Framework</h3>
+                <div class="line"></div>
+                <div class="grid">
+                    <div class="icons">
+                        <img src="./assets/django.png" alt="dj-img">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Software</h3>
+                <div class="line"></div>
+                <div class="grid">
+                    <div class="icons">
+                        <img src="./assets/figma.png" alt="figma-img">
+                    </div>
+                    <div class="icons">
+                        <img src="./assets/Ai.png" alt="ai-img">
+                    </div>
+                    <div class="icons">
+                        <img src="./assets/Ps.png" alt="ps-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------footer----------- -->
+    <footer id="footer">
+        <p>© 2022 Disha Chouhan All Rights Reserved.</p>
+    </footer>
+
+    <!-- ---------------navbar--------------- -->
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>

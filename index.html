@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit Soneja's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/0e6863b0de.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="continer">
+            <nav id="navbar">
+                <img src="" alt="">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1><span>Hello, I am </span><br> Mohit Soneja</h1>
+                <p class="tag">Web Developer & UI Designer</p>
+                <button class="btn"> My Projects</button>
+            </div>
+        </div>
+    </div>
+    <!-- -------------about section----------- -->
+    <section id="about">
+        <div class="row">
+            <div class="about-col1">
+                <img src="./assets/kav.png" alt="image">
+            </div>
+            <div class="about-col2">
+                <h3><span>About</span> Me</h3>
+                <p id="hello">Hello!</p>
+                <p>I am an aspiring web based developer as well as a data analyst who enjoys connecting the dots: be it ideas from different disciplines, people from different teams, or applications from different industries. I have appreciable technical
+                    skills and an academic background in engineering, statistics, and web technologies. <br> In my graduate studies, I’ve taken on various leadership roles, including mentoring about five undergraduate interns, coordinating state-wide
+                    research events for hundreds of people, and leading one of the nationally renowned entrepreneurial clubs.</p>
+
+                <div class="parts">
+                    <p class="sub-part active-link" onclick="opentab('experience')">Experience</p>
+                    <p class="sub-part" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="sub-content active-content" id="experience">
+                    <ul>
+                        <li><span>May 2021 - Curent</span> <br>Head Coordinator @ E-Cell IET DAVV</li>
+                        <li><span>Oct 2022 - Cuurent</span> <br>Product Manager Associate @ AstroAnalytics</li>
+                        <li><span>Dec 2021 - Dec 2022</span> <br>Creative Director @ MinimalHolic</li>
+                        <li><span>Oct 2021 - Dec 2021</span> <br>UI/UX Design Intern @ ArchLabs</li>
+                        <li><span>June 2021 - Oct 2021</span> <br>SEO Intern @ InchtoMilez</li>
+                    </ul>
+                </div>
+                <div class="sub-content" id="education">
+                    <ul>
+                        <li><span>2006-2018</span> <br>SICA SS School, Indore</li>
+                        <li><span>2018-2020</span> <br>Higher Education, St Umar HS School</li>
+                        <li><span>2020-current</span><br> BE, IET DAVV, Indore</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -------------contact section----------- -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h3><span>Contact</span> me</h3>
+                    <p><i class="fa-solid fa-paper-plane"></i>mohit98775@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/mohit-soneja/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/sonejamohit"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/mohitsoneja_/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.twitter.com/MohitSoneja16"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <p>© 2022 Mohit Soneja All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        var subpart = document.getElementsByClassName("sub-part")
+        var subcontent = document.getElementsByClassName("sub-content")
+
+        function opentab(partname) {
+            for (parts of subpart) {
+                parts.classList.remove("active-link");
+            }
+            for (content of subcontent) {
+                content.classList.remove("active-content");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(partname).classList.add("active-content");
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbze_8ntA8nXquPN59953-Oni2qBH00v_4VsNSOxpGnXOonut4kTFmLAIfpVblLjZXOi_g/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function() {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>

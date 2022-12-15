@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #ffffff;
+    --bg-color: #a9321d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #fff;
+    background: var(--bg-color);
+}
+
+
+/* navbar */
+
+nav {
+    padding: 6px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: right;
+    background: var(--bg-color);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav .fa-solid {
+    display: none;
+}
+
+
+/* --------------------------skils bg---------------------------- */
+
+.header {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 80vh;
+}
+
+.header::before {
+    content: '0';
+    display: block;
+    position: relative;
+    left: 0;
+    top: 8%;
+    width: 100%;
+    height: 120%;
+    opacity: 0.2;
+    /* background: url('./assets/vector1.png'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    letter-spacing: 3px;
+}
+
+
+/* --------------------skills------------------ */
+
+#skills {
+    margin: auto;
+    width: 80%;
+}
+
+.box {
+    width: 95%;
+    align-items: center;
+    position: relative;
+    left: 10%;
+}
+
+.box h3 {
+    color: var(--main-color);
+    font-size: 26px;
+    padding-bottom: 12px;
+}
+
+.line {
+    content: "";
+    width: 80%;
+    background: var(--main-color);
+    height: 3px;
+}
+
+.grid {
+    display: flex;
+}
+
+.icons {
+    flex-basis: 12%;
+    margin: 10px 0;
+    padding-top: 6px;
+    padding-bottom: 20px;
+}
+
+.icons img {
+    /* background: #bac0f8; */
+    /* border: 0.5px solid #fff; */
+    width: 80%;
+    border-radius: 10px;
+}
+
+
+/* ------------footer----------------- */
+
+#footer {
+    background: #ffffff16;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    font-size: small;
+    width: 100%;
+}
+
+
+/* -----------media query--------- */
+
+@media only screen and (max-width:776px) {
+    #skills {
+        margin: auto;
+        width: 90%;
+    }
+    .box h3 {
+        font-size: 22px;
+    }
+    .icons {
+        flex-basis: 12%;
+    }
+}
+
+@media only screen and (max-width: 698px) {
+    nav ul li {
+        margin: 4px 8px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+    .icons img {
+        width: 85%;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width:526px) {
+    #footer {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+    }
+    .header h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 50px;
+        letter-spacing: 3px;
+    }
+    .box h3 {
+        font-size: 20px;
+        padding-bottom: 6px;
+    }
+    .icons {
+        padding-bottom: 10px;
+        padding-top: 4px;
+    }
+}
+
+@media only screen and (max-width:375px) {
+    .box h3 {
+        font-size: 16px;
+        padding-bottom: 4px;
+    }
+    .line {
+        width: 90%;
+        height: 2px;
+    }
+    .icons {
+        flex-basis: 16%;
+        margin-bottom: 0px;
+        padding-bottom: 16px;
+    }
+    .icons img {
+        width: 85%;
+        border-radius: 6px;
+    }
+    nav {
+        background-color: var(--main-color);
+        height: 50px;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+        color: var(--bg-color);
+    }
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        background-color: var(--main-color);
+        opacity: 0.97;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul li a {
+        color: var(--bg-color);
+        font-weight: 550;
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 13px;
+        right: 28px;
+        cursor: pointer;
+    }
+}
