@@ -15,8 +15,8 @@ html {
 }
 
 body {
-    color: #fff;
-    background: var(--bg-color);
+    color: var(--bg-color);
+    background: #fff;
 }
 
 
@@ -76,7 +76,7 @@ nav .fa-solid {
 .header {
     position: relative;
     text-align: center;
-    color: white;
+    color: #a9321d;
     height: 80vh;
 }
 
@@ -113,13 +113,13 @@ nav .fa-solid {
     /* margin: 10px; */
     flex-basis: 25%;
     background-color: var(--main-color);
-    background-image: linear-gradient(to top left, #ffffff00, #ffffff);
     filter: blur(42);
     border-radius: 10px;
 }
 
 .img-part img {
     width: 100%;
+    border-radius: 10px;
 }
 
 .para-part {

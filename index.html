@@ -28,8 +28,10 @@
             </nav>
             <div class="header-text">
                 <h1><span>Hello, I am </span><br> Mohit Soneja</h1>
-                <p class="tag">Web Developer & UI Designer</p>
-                <button class="btn"> My Projects</button>
+                <span class="tag" style="color:black;">Web Developer</span>
+                <div class="btn-container">
+                    <a href="projects.html"><button class="btn"> My Projects</button></a>
+                </div>
             </div>
         </div>
     </div>
@@ -41,7 +43,7 @@
             </div>
             <div class="about-col2">
                 <h3><span>About</span> Me</h3>
-                <p id="hello">Hello!</p>
+                <p id="hello"> <br> </p>
                 <p>I am an aspiring web based developer as well as a data analyst who enjoys connecting the dots: be it ideas from different disciplines, people from different teams, or applications from different industries. I have appreciable technical
                     skills and an academic background in engineering, statistics, and web technologies. <br> In my graduate studies, I’ve taken on various leadership roles, including mentoring about five undergraduate interns, coordinating state-wide
                     research events for hundreds of people, and leading one of the nationally renowned entrepreneurial clubs.</p>
@@ -145,6 +147,21 @@
         function closemenu() {
             sidemenu.style.right = "-200px";
         }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".tag", {
+            strings: ["Web Developer", "UI/UX Designer", "Data Analyst"],
+            typeSpeed: 110,
+            backSpeed: 110,
+            loop: true
+        })
+        var typed = new Typed(".abt", {
+            strings: ["About"],
+            typeSpeed: 110,
+            backSpeed: 110,
+            loop: true
+        })
     </script>
 </body>
 
